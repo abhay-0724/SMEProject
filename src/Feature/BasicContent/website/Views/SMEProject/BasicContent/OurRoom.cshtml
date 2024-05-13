@@ -1,0 +1,30 @@
+﻿@model IEnumerable<SMEProject.Feature.BasicContent.Models.OurRoom>
+<div class="container text-center" id="rooms">
+    <div class="row">
+        <div class="col-12" id="rsum1">@Html.Sitecore().Field("RoomTitle")</div>
+        <div class="col-12" id="rintro">@Html.Sitecore().Field("RoomSubTitle")</div>
+        <div class="col-12" id="rsum2">@Html.Sitecore().Field("RoomQuote")</div>
+    </div>
+    @{
+        int i = 0;
+        foreach (var item in Model)
+        {
+            <div class="row align-items-center my-2">
+                <div class="col-md-3 order-md-@(i % 2 == 0 ? "1" : "2")">
+                    <img class="img-fluid" src="@item.RoomImage" alt="@item.RoomImageAlt">
+                </div>
+                <div class="col-md-9 order-md-@(i % 2 == 0 ? "2" : "1")">
+                    <div class="rdesc" style="text-align:left;">
+                        @item.RoomDescription
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            i++;
+        }
+    }
+</div>
+
+

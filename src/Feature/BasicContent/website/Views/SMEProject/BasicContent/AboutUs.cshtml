@@ -1,0 +1,20 @@
+﻿<div class="container text-center" id="about">
+    <div class="row">
+        <div class="col-12" id="asum1">@Html.Sitecore().Field("AboutTitle")</div>
+        <div class="col-12" id="aintro">@Html.Sitecore().Field("AboutUs")</div>
+        <div class="col-12" id="asum2">@Html.Sitecore().Field("AboutMoto")</div>
+    </div>
+    <div class="row mx-2" id="r3">
+        <div class="col-md-4">
+            @Html.Sitecore().Field("AboutImage")
+        </div>
+        <div class="col-md-8">
+            <div class="adesc text-ri">
+                @Html.Sitecore().Field("AboutDescription")
+                <div class="d-flex justify-content-center">
+                    <a href="about.html" target="_blank" class="btn btn-primary" id="aboutbtn">Explore us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
