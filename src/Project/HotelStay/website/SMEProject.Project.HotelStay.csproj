@@ -590,7 +590,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\SMEProject\HotelStay\_HotelStay.cshtml" />
-    <None Include="App_Config\Include\HotelStay\HotelStaySiteDefinition.config" />
+    <Content Include="App_Config\Include\HotelStay\HotelStaySiteDefinition.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

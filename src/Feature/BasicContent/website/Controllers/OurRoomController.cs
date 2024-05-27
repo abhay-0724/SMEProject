@@ -8,6 +8,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Sitecore.Web.UI.WebControls;
+using Sitecore.Mvc.Presentation;
 
 namespace SMEProject.Feature.BasicContent.Controllers
 {
@@ -16,7 +17,7 @@ namespace SMEProject.Feature.BasicContent.Controllers
         // GET: OurRoom
         public ActionResult OurRoom()
         {
-            Item item = Sitecore.Context.Item;
+            Item item = RenderingContext.Current.Rendering.Item;
             List<OurRoom> selectedItemsData = new List<OurRoom>();
             MultilistField roomList = item.Fields["RoomList"];
             if (roomList != null)
@@ -26,7 +27,9 @@ namespace SMEProject.Feature.BasicContent.Controllers
                                         {
                                             RoomImage = GetImageUrl(x, "RoomImage"),
                                             RoomImageAlt = GetImagealt(x, "RoomImage"),
-                                            RoomDescription = new HtmlString(FieldRenderer.Render(x, "RoomDescription")),
+                                            RoomIntro = new HtmlString(FieldRenderer.Render(x, "RoomIntro")),
+                                            RoomService = new HtmlString(FieldRenderer.Render(x, "RoomService")),
+                                            RoomSpecial = new HtmlString(FieldRenderer.Render(x, "RoomSpecial")),
                                         }).ToList();
 
             }

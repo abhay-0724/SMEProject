@@ -1,0 +1,21 @@
+﻿<!-- Hero -->
+@{
+    var item = Sitecore.Context.Item;
+    Sitecore.Data.Fields.ImageField imageField = item.Fields["HomeImage"];
+    Sitecore.Data.Items.MediaItem image = new Sitecore.Data.Items.MediaItem(imageField.MediaItem);
+    string imageUrl = Sitecore.Resources.Media.MediaManager.GetMediaUrl(image);
+}
+<div class="p-5 text-center bg-image rounded-3" style="
+    background-image: url('@imageUrl');
+    height: 450px;
+  ">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.4);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+                <h1 class="mb-3">@Html.Sitecore().Field("Title")</h1>
+                <h4 class="mb-3">@Html.Sitecore().Field("Subitle")</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero -->

@@ -1,20 +1,25 @@
-﻿<div class="container text-center" id="about">
+﻿@model SMEProject.Feature.BasicContent.Models.AboutUs
+<!-- About  -->
+<div class="container text-center mt-4">
     <div class="row">
-        <div class="col-12" id="asum1">@Html.Sitecore().Field("AboutTitle")</div>
-        <div class="col-12" id="aintro">@Html.Sitecore().Field("AboutUs")</div>
-        <div class="col-12" id="asum2">@Html.Sitecore().Field("AboutMoto")</div>
-    </div>
-    <div class="row mx-2" id="r3">
-        <div class="col-md-4">
-            @Html.Sitecore().Field("AboutImage")
-        </div>
-        <div class="col-md-8">
-            <div class="adesc text-ri">
-                @Html.Sitecore().Field("AboutDescription")
-                <div class="d-flex justify-content-center">
-                    <a href="about.html" target="_blank" class="btn btn-primary" id="aboutbtn">Explore us</a>
+        <div class="col-12 mt-2 fs-4 text-danger" id="asum1">@Model.AboutTitle</div>
+        <div class="col-12 fs-1" id="aintro">@Model.AboutSubTitle</div>
+        <div class="col-12 fs-4 text-danger" id="asum2"> @Model.AboutQuote</div>
+     </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="@Model.Image" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-6">
+                <div class="about">
+
+                    <div class="aboutpic" id="r3">
+                        <div class="adesc">
+                            @Model.AboutDescription
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+

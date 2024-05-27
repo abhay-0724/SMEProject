@@ -1,18 +1,18 @@
 ﻿@model IEnumerable<SMEProject.Feature.BasicContent.Models.OurKitchen>
 
 <!-- Kitchen -->
-<div class="container text-center" id="kitchen">
+<div class="container text-center mt-4" id="kitchen">
     <div class="row">
-        <div class="col-12" id="sum1">@Html.Sitecore().Field("Cook_Question")</div>
-        <div class="col-12" id="intro">@Html.Sitecore().Field("KitchenTitle")</div>
-        <div class="col-12" id="sum2">@Html.Sitecore().Field("KitchenSubTitle")</div>
+        <div class="col-12 mt-2 fs-4 text-danger" id="sum1">@Html.Sitecore().Field("Cook_Question")</div>
+        <div class="col-12 fs-1" id="intro">@Html.Sitecore().Field("KitchenTitle")</div>
+        <div class="col-12 fs-4 text-danger" id="sum2">@Html.Sitecore().Field("KitchenSubTitle")</div>
     </div>
     <div class="row">
         @foreach (var item in Model)
         {
             <div class="col-md-4 my-2">
                 <div class="card">
-                    <img class="card-img-top" src="@item.Image" alt="@item.ImageAlt" style="height:500px;">
+                    <img class="card-img-top" src="@item.Image" alt="@item.ImageAlt" style="height:300px;">
                     <div class="card-body">
                         <h5 class="card-title">@item.Title</h5>
                     </div>

@@ -1,24 +1,24 @@
 ﻿@model IEnumerable<SMEProject.Feature.BasicContent.Models.OurRoom>
-<div class="container text-center" id="rooms">
+<div class="container text-center mt-4" id="rooms">
     <div class="row">
-        <div class="col-12" id="rsum1">@Html.Sitecore().Field("RoomTitle")</div>
-        <div class="col-12" id="rintro">@Html.Sitecore().Field("RoomSubTitle")</div>
-        <div class="col-12" id="rsum2">@Html.Sitecore().Field("RoomQuote")</div>
+        <div class="col-12 mt-2 fs-4 text-danger" id="rsum2">@Html.Sitecore().Field("RoomQuestion")</div>
+        <div class="col-12 fs-1" id="rsum1">@Html.Sitecore().Field("RoomTitle")</div>
+        <div class="col-12 fs-4 text-danger" id="rintro">@Html.Sitecore().Field("RoomSubTitle")</div>
+
     </div>
     @{
         int i = 0;
         foreach (var item in Model)
         {
             <div class="row align-items-center my-2">
-                <div class="col-md-3 order-md-@(i % 2 == 0 ? "1" : "2")">
-                    <img class="img-fluid" src="@item.RoomImage" alt="@item.RoomImageAlt">
+                <div class="col-md-5 order-md-@(i % 2 == 0 ? "1" : "2")">
+                    <img class="img-fluid" src="@item.RoomImage" alt="@item.RoomImageAlt" style="height:351px">
                 </div>
-                <div class="col-md-9 order-md-@(i % 2 == 0 ? "2" : "1")">
+                <div class="col-md-7 order-md-@(i % 2 == 0 ? "2" : "1")">
                     <div class="rdesc" style="text-align:left;">
-                        @item.RoomDescription
-                        <div class="d-flex justify-content-center">
-                            <button class="btn btn-primary">Book Now</button>
-                        </div>
+                        @item.RoomIntro <br />
+                        @item.RoomService <br />
+                        @item.RoomSpecial                    
                     </div>
                 </div>
             </div>

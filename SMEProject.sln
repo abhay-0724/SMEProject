@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{2357
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{1B199F2B-D025-4267-A507-312B5EB6382B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{376B8F3C-F25D-4C1B-A366-8732266E8033}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HotelStay", "HotelStay", "{EA6576C3-E1A7-4C49-83DB-3F90ECCDF228}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicContent", "BasicContent", "{CBA5D606-493A-4254-8E5E-2C60F2AACBE6}"
@@ -18,6 +16,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMEProject.Project.HotelStay", "src\Project\HotelStay\website\SMEProject.Project.HotelStay.csproj", "{7CD2A77A-4F60-46A4-A652-31FCE58D1A03}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMEProject.Feature.BasicContent", "src\Feature\BasicContent\website\SMEProject.Feature.BasicContent.csproj", "{99273A6D-5CA2-4A89-812D-068096743674}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Navigation", "Navigation", "{75F42701-4F04-4413-8EE3-CED75DE22C87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMEProject.Foundation.Navigation", "src\Foundation\Navigation\website\SMEProject.Foundation.Navigation.csproj", "{6037921E-EA02-4B41-AC23-5FDED4F3D538}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,16 +35,21 @@ Global
 		{99273A6D-5CA2-4A89-812D-068096743674}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99273A6D-5CA2-4A89-812D-068096743674}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99273A6D-5CA2-4A89-812D-068096743674}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6037921E-EA02-4B41-AC23-5FDED4F3D538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6037921E-EA02-4B41-AC23-5FDED4F3D538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6037921E-EA02-4B41-AC23-5FDED4F3D538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6037921E-EA02-4B41-AC23-5FDED4F3D538}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{376B8F3C-F25D-4C1B-A366-8732266E8033} = {1B199F2B-D025-4267-A507-312B5EB6382B}
 		{EA6576C3-E1A7-4C49-83DB-3F90ECCDF228} = {4213E276-CD1F-44A5-A37C-D0FDFF3A86D1}
 		{CBA5D606-493A-4254-8E5E-2C60F2AACBE6} = {2357EB3F-A2A8-4507-A0B4-7FB34F5B58C4}
 		{7CD2A77A-4F60-46A4-A652-31FCE58D1A03} = {EA6576C3-E1A7-4C49-83DB-3F90ECCDF228}
 		{99273A6D-5CA2-4A89-812D-068096743674} = {CBA5D606-493A-4254-8E5E-2C60F2AACBE6}
+		{75F42701-4F04-4413-8EE3-CED75DE22C87} = {1B199F2B-D025-4267-A507-312B5EB6382B}
+		{6037921E-EA02-4B41-AC23-5FDED4F3D538} = {75F42701-4F04-4413-8EE3-CED75DE22C87}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D52BBFE5-2C40-4C99-AE4B-4F61B061AE03}

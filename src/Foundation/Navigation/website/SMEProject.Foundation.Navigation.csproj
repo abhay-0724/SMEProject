@@ -7,16 +7,16 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{99273A6D-5CA2-4A89-812D-068096743674}</ProjectGuid>
+    <ProjectGuid>{6037921E-EA02-4B41-AC23-5FDED4F3D538}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SMEProject.Feature.BasicContent</RootNamespace>
-    <AssemblyName>SMEProject.Feature.BasicContent</AssemblyName>
+    <RootNamespace>SMEProject.Foundation.Navigation</RootNamespace>
+    <AssemblyName>SMEProject.Foundation.Navigation</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44364</IISExpressSSLPort>
+    <IISExpressSSLPort>44331</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -589,24 +589,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\SMEProject\BasicContent\OurKitchen.cshtml" />
-    <Content Include="Views\SMEProject\BasicContent\AboutUs.cshtml" />
-    <Content Include="Views\SMEProject\BasicContent\OurRoom.cshtml" />
-    <Content Include="Views\SMEProject\BasicContent\Footer.cshtml" />
-    <Content Include="Views\SMEProject\BasicContent\RoomDetailed.cshtml" />
-    <Content Include="Views\SMEProject\BasicContent\Home.cshtml" />
-    <Content Include="Views\SMEProject\BasicContent\BookingDetails.cshtml" />
+    <Content Include="Views\SMEProject\Navigation\Navigation.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\AboutUsController.cs" />
-    <Compile Include="Controllers\FooterController.cs" />
-    <Compile Include="Controllers\OurKitchenController.cs" />
-    <Compile Include="Controllers\OurRoomController.cs" />
-    <Compile Include="Models\AboutUs.cs" />
-    <Compile Include="Models\FooterModel.cs" />
-    <Compile Include="Models\OurKitchen.cs" />
-    <Compile Include="Models\OurRoom.cs" />
+    <Compile Include="Controllers\NavigationController.cs" />
+    <Compile Include="Models\MainNavigation.cs" />
+    <Compile Include="Models\NavigationItem.cs" />
+    <Compile Include="Models\NavigationMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -621,8 +611,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\AboutUs\" />
-    <Folder Include="Views\Footer\" />
+    <Folder Include="Views\Navigation\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -637,9 +626,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>58118</DevelopmentServerPort>
+          <DevelopmentServerPort>62642</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44364/</IISUrl>
+          <IISUrl>https://localhost:44331/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

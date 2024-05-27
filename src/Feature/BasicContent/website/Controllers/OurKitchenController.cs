@@ -1,5 +1,6 @@
 ﻿using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
+using Sitecore.Mvc.Presentation;
 using Sitecore.Resources.Media;
 using Sitecore.Web.UI.WebControls;
 using SMEProject.Feature.BasicContent.Models;
@@ -16,7 +17,10 @@ namespace SMEProject.Feature.BasicContent.Controllers
         // GET: OurKitchen
         public ActionResult OurKitchen()
         {
-            Item item = Sitecore.Context.Item;
+            Item item = RenderingContext.Current.Rendering.Item;
+            //var item = Sitecore.Context.Item;
+
+           
             List<OurKitchen> selectedItemsData = new List<OurKitchen>();
             MultilistField menuList = item.Fields["Meals"];
             if (menuList != null)
