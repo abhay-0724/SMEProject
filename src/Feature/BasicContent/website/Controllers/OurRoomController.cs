@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using Sitecore.Web.UI.WebControls;
 using Sitecore.Mvc.Presentation;
+using Sitecore.Links;
 
 namespace SMEProject.Feature.BasicContent.Controllers
 {
@@ -18,13 +19,15 @@ namespace SMEProject.Feature.BasicContent.Controllers
         public ActionResult OurRoom()
         {
             Item item = RenderingContext.Current.Rendering.Item;
+           
             List<OurRoom> selectedItemsData = new List<OurRoom>();
             MultilistField roomList = item.Fields["RoomList"];
             if (roomList != null)
             {
                 selectedItemsData = roomList.GetItems()
                                         .Select(x => new Models.OurRoom
-                                        {
+                                        {   
+                                            BookingForm = GetLinkUrl(x,"BookingPage"),
                                             RoomImage = GetImageUrl(x, "RoomImage"),
                                             RoomImageAlt = GetImagealt(x, "RoomImage"),
                                             RoomIntro = new HtmlString(FieldRenderer.Render(x, "RoomIntro")),
@@ -46,6 +49,28 @@ namespace SMEProject.Feature.BasicContent.Controllers
             ImageField imageField = item.Fields[fieldName];
             return imageField.Alt;
       
+        }
+        private string GetLinkUrl(Item item, string fieldName)
+        {
+            if (item == null || string.IsNullOrEmpty(fieldName))
+                return null;
+
+            LinkField linkField = item.Fields[fieldName];
+
+            if (linkField != null)
+            {
+                if (linkField.IsInternal)
+                {
+                    // Use LinkManager to generate the URL for internal links
+                    return LinkManager.GetItemUrl(linkField.TargetItem);
+                }
+                else
+                {
+                    // For external links or other link types
+                    return linkField.Url;
+                }
+            }
+            return null;
         }
     }
 }

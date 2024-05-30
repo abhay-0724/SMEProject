@@ -596,14 +596,20 @@
     <Content Include="Views\SMEProject\BasicContent\RoomDetailed.cshtml" />
     <Content Include="Views\SMEProject\BasicContent\Home.cshtml" />
     <Content Include="Views\SMEProject\BasicContent\BookingDetails.cshtml" />
+    <Content Include="Views\SMEProject\BasicContent\BookingForm.cshtml" />
+    <Content Include="Views\SMEProject\BasicContent\BookingConfirmation.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AboutUsController.cs" />
+    <Compile Include="Controllers\BookingFormController.cs" />
     <Compile Include="Controllers\FooterController.cs" />
     <Compile Include="Controllers\OurKitchenController.cs" />
     <Compile Include="Controllers\OurRoomController.cs" />
     <Compile Include="Models\AboutUs.cs" />
+    <Compile Include="Models\BookingFormLabelModel.cs" />
+    <Compile Include="Models\BookingFormModel.cs" />
+    <Compile Include="Models\BookingFormViewModel.cs" />
     <Compile Include="Models\FooterModel.cs" />
     <Compile Include="Models\OurKitchen.cs" />
     <Compile Include="Models\OurRoom.cs" />
@@ -621,8 +627,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\AboutUs\" />
-    <Folder Include="Views\Footer\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

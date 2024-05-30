@@ -1,0 +1,36 @@
+﻿@model SMEProject.Feature.BasicContent.Models.BookingFormViewModel
+@using (Html.BeginForm())
+{
+    <div class="container mt-5">
+        <form>
+            <div class="form-group">
+                <label for="@Model.BookingFormLabelModel.NameLabel">@Model.BookingFormLabelModel.NameLabel</label>
+                <input type="text" class="form-control" id="@Model.BookingFormModel.Name" name="@Model.BookingFormModel.Name" placeholder="@Model.BookingFormLabelModel.NameLabel" required>
+            </div>
+            <div class="form-group">
+                <label for="@Model.BookingFormLabelModel.EmailLabel">@Model.BookingFormLabelModel.EmailLabel</label>
+                <input type="email" class="form-control" id="@Model.BookingFormModel.Email" name="@Model.BookingFormModel.Email" placeholder="@Model.BookingFormLabelModel.EmailPlaceholder" required>
+            </div>
+            <div class="form-group">
+                <label for="@Model.BookingFormLabelModel.PhoneNumberLabel">@Model.BookingFormLabelModel.PhoneNumberLabel</label>
+                <input type="tel" class="form-control" id="@Model.BookingFormModel.PhoneNumber" name="@Model.BookingFormModel.PhoneNumber" placeholder="@Model.BookingFormLabelModel.PhoneNumberPlaceholder" required>
+            </div>
+            <div class="form-group">
+                <label for="@Model.BookingFormLabelModel.AddressLabel">@Model.BookingFormLabelModel.AddressLabel</label>
+                <input type="text" class="form-control" id="@Model.BookingFormModel.Address" name="@Model.BookingFormModel.Address" placeholder="@Model.BookingFormLabelModel.AddressPlaceholder" required>
+            </div>
+            <div class="form-group">
+                <label for="@Model.BookingFormLabelModel.BookingDateLabel">@Model.BookingFormLabelModel.BookingDateLabel</label>
+                <input type="date" class="form-control" id="@Model.BookingFormModel.BookingDate" name="@Model.BookingFormModel.BookingDate" placeholder="@Model.BookingFormLabelModel.BookingDatePlaceholder" required>
+            </div>
+            <div class="form-group">
+                <label for="@Model.BookingFormLabelModel.VacatingDateLabel">@Model.BookingFormLabelModel.VacatingDateLabel</label>
+                <input type="date" class="form-control" id="@Model.BookingFormModel.VacatingDate" name="@Model.BookingFormModel.VacatingDate" placeholder="@Model.BookingFormLabelModel.VacatingDatePlaceholder" required>
+            </div>
+            <button type="submit" class="btn btn-primary">@Model.BookingFormLabelModel.SubmitButtonLabel</button>
+        </form>
+    </div>
+
+
+}
+

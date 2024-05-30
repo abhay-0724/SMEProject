@@ -13,5 +13,6 @@ namespace SMEProject.Feature.BasicContent.Models
         public HtmlString RoomSpecial { get; set; }
         public string RoomImage { get; set; }
         public string RoomImageAlt { get; set; }
+        public string BookingForm { get; set; }
     }
 }
